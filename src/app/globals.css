@@ -65,7 +65,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-   transition: background .4s; /* For dark mode */
+  transition: background .4s; /* For dark mode */
 }
 
 h1,
@@ -122,7 +122,7 @@ body.dark-theme{
   box-shadow: 0 1px 12px hsla(0, 0%, 0%, .6);
 }
 
-.dark-theme .section-title-1::after
+.dark-theme .section-title-1::after,
 .dark-theme .section-title-2::after{
   background-color: hsla(14, 70%, 50%, .2);
 }
@@ -952,6 +952,8 @@ body.dark-theme{
 .contact-button {
   background-color: var(--first-color);
   cursor: pointer;
+  color: var(--white-color);
+  font-weight: var(--font-bold);
 }
 
 /* Opaque placeholder */
@@ -1091,7 +1093,7 @@ body.dark-theme{
   transition: bottom 0.4s, transform 0.4s, background-color 0.4s;
 }
 
-.scrollup:hover {
+.scroll-up:hover {
   transform: translateY(-0.5rem);
 }
 
@@ -1414,7 +1416,6 @@ body.dark-theme{
 
   .about-container{
     align-self: flex-end;
-    margin-inline: 0;
   }
 
   .about-info{
