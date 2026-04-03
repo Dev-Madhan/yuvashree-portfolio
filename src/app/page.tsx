@@ -37,7 +37,8 @@ export default function Page() {
             yPercent: -100,
             opacity: 0,
             duration: 0.8,
-            ease: "power3.out"
+            ease: "power3.out",
+            clearProps: "all"
         }, "-=0.4");
     }, []);
 

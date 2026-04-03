@@ -220,7 +220,8 @@ body.dark-theme{
   background-color: hsl(0, 0%, 40%);
 }
 /*=============== REUSABLE CSS CLASSES ===============*/
-.container {
+:root .container {
+  width: auto;
   max-width: 1120px;
   margin-inline: 1.5rem;
 }
@@ -336,7 +337,7 @@ body.dark-theme{
 @media screen and (max-width: 1150px) {
   .nav-menu {
     position: fixed;
-    top: -100%;
+    top: -100vh;
     left: 0;
     background-color: hsla(0, 0%, 0%, 0.75);
     width: 100%;
@@ -1243,7 +1244,7 @@ body.dark-theme{
 }
 /* For large devices */
 @media screen and (min-width: 1150px){
-  .container{
+  :root .container{
     margin-inline: auto;
   }
 
