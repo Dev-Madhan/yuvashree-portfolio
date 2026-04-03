@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
     const form = useRef<HTMLFormElement>(null);
@@ -27,7 +28,13 @@ const Contact = () => {
     return (
         <section className="contact section" id="contact">
             <div className="contact-container container grid">
-                <div className="contact-data">
+                <motion.div 
+                    className="contact-data"
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                >
                     <h2 className="section-title-2">Contact Me.</h2>
                     <p className="contact-description-1">
                         I will read all emails. Send me any message you want and I'll get back to you.
@@ -36,9 +43,15 @@ const Contact = () => {
                         I need your <b>Name</b> and <b>Email Address</b>, but you won't receive anything other than your reply.
                     </p>
                     <div className="geometric-box"></div>
-                </div>
+                </motion.div>
 
-                <div className="contact-mail">
+                <motion.div 
+                    className="contact-mail"
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                >
                     <h2 className="contact-title">Send Me A Message</h2>
 
                     <form ref={form} onSubmit={sendEmail} className="contact-form" id="contact-form">
@@ -70,9 +83,15 @@ const Contact = () => {
                             <i className="ri-send-plane-line"></i> Send Message
                         </button>
                     </form>
-                </div>
+                </motion.div>
 
-                <div className="contact-social">
+                <motion.div 
+                    className="contact-social"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                >
                     <img src="/img/curved-arrow.svg" alt="" className="contact-social-arrow" />
                     <div className="contact-social-data">
                         <div>
@@ -92,7 +111,7 @@ const Contact = () => {
                             </a>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

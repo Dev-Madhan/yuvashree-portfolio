@@ -1,13 +1,50 @@
-import React from 'react';
+"use client";
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+import gsap from 'gsap';
 
 const Home = () => {
+    const sectionRef = useRef<HTMLElement>(null);
+    const nameText = "Yuvashree";
+
+    useEffect(() => {
+        if (!sectionRef.current) return;
+        
+        const q = gsap.utils.selector(sectionRef.current);
+        
+        gsap.from(q(".letter"), {
+            opacity: 0,
+            y: 50,
+            rotateX: -90,
+            stagger: 0.05,
+            duration: 1,
+            delay: 2, // After curtain
+            ease: "back.out(1.7)"
+        });
+    }, []);
+
     return (
-        <section className="home section" id="home">
+        <section ref={sectionRef} className="home section" id="home">
             <div className="home-container container grid">
-                <h1 className="home-name">Renzo Cruz</h1>
+                <motion.h1 
+                    className="home-name"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                >
+                    {nameText.split("").map((char, index) => (
+                        <span key={index} className="letter" style={{ display: 'inline-block' }}>
+                            {char === " " ? "\u00A0" : char}
+                        </span>
+                    ))}
+                </motion.h1>
 
                 <div className="home-profile">
-                    <div className="home-image">
+                    <motion.div 
+                        className="home-image"
+                        initial={{ opacity: 0, x: 100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1, delay: 0.4 }}
+                    >
                         <img
                             src="/img/home-perfil.jpg"
                             alt="home image"
@@ -25,9 +62,14 @@ const Home = () => {
                             className="home-line" />
 
                         <div className="geometric-box"></div>
-                    </div>
+                    </motion.div>
 
-                    <div className="home-social">
+                    <motion.div 
+                        className="home-social"
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.6 }}
+                    >
                         <a
                             href="https://www.instagram.com/"
                             target="_blank"
@@ -46,10 +88,15 @@ const Home = () => {
                             className="home-social-link">
                             <i className="bx bxl-github"></i>
                         </a>
-                    </div>
+                    </motion.div>
                 </div>
 
-                <div className="home-info">
+                <motion.div 
+                    className="home-info"
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, delay: 0.8 }}
+                >
                     <p className="home-description">
                         <b>Frontend Developer</b>, with knowledge in web development and
                         design, I offer the best projects resulting in quality work.
@@ -61,7 +108,7 @@ const Home = () => {
                         </div>
                         <span className="home-scroll-text">Scroll Down</span>
                     </a>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

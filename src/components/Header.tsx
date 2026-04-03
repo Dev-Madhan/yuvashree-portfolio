@@ -63,13 +63,13 @@ const Header = () => {
         <header className={`header ${hasShadow ? 'shadow-header' : ''}`} id="header">
             <nav className="nav container">
                 <Link href="#" className="nav-logo">
-                    <span className="nav-logo-circle">R</span>
-                    <span className="nav-logo-name">Renzo Cruz.</span>
+                    <span className="nav-logo-circle">Y</span>
+                    <span className="nav-logo-name">Yuvashree.</span>
                 </Link>
 
                 <div className={`nav-menu ${isMenuOpen ? 'show-menu' : ''}`} id="nav-menu">
                     <span className="nav-title">Menu</span>
-                    <h3 className="nav-name">Renzo</h3>
+                    <h3 className="nav-name">Yuvashree</h3>
                     <ul className="nav-list">
                         <li className="nav-item">
                             <a href="#home" className="nav-link active-link" onClick={() => setIsMenuOpen(false)}>Home</a>

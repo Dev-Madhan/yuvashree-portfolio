@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Header from '@/components/Header';
 import Home from '@/components/Home';
 import About from '@/components/About';
@@ -8,31 +8,50 @@ import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import ScrollUp from '@/components/ScrollUp';
+import gsap from 'gsap';
+import { Letter3DSwap } from '@/components/ui/letter-3d-swap';
 
 export default function Page() {
+    const containerRef = useRef<HTMLDivElement>(null);
+
     useEffect(() => {
-        const initScrollReveal = async () => {
-            const ScrollReveal = (await import('scrollreveal')).default;
-            const sr = ScrollReveal({
-                origin: 'top',
-                distance: '60px',
-                duration: 2500,
-                delay: 400,
-                // reset: true // Animation repeat 
-            });
-
-            sr.reveal(`.home-profile, .about-image, .contact-mail`, { origin: 'right' });
-            sr.reveal(`.home-name, .home-info,
-                       .about-container, .section-title-1, .about-info,
-                       .contact-social, .contact-data`, { origin: 'left' });
-            sr.reveal(`.services-card, .projects-card`, { interval: 100 });
-        };
-
-        initScrollReveal();
+        if (!containerRef.current) return;
+        
+        const q = gsap.utils.selector(containerRef.current);
+        const tl = gsap.timeline();
+        
+        tl.from(q(".intro-char-wrapper"), {
+            yPercent: 100,
+            opacity: 0,
+            stagger: 0.05,
+            duration: 0.8,
+            ease: "power2.out"
+        })
+        .to(q(".intro-curtain"), {
+            yPercent: -100,
+            duration: 1.2,
+            ease: "power4.inOut",
+            delay: 0.3
+        })
+        .from(".header", {
+            yPercent: -100,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out"
+        }, "-=0.4");
     }, []);
 
+    const nameText = "YUVASHREE";
+
     return (
-        <>
+        <div ref={containerRef}>
+            <div className="intro-curtain">
+                <div className="intro-text">
+                    <Letter3DSwap>
+                        {nameText}
+                    </Letter3DSwap>
+                </div>
+            </div>
             <Header />
             <main className="main">
                 <Home />
@@ -43,6 +62,6 @@ export default function Page() {
             </main>
             <Footer />
             <ScrollUp />
-        </>
+        </div>
     );
 }

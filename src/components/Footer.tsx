@@ -1,8 +1,16 @@
+"use client";
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
     return (
-        <footer className="footer">
+        <motion.footer 
+            className="footer"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+        >
             <div className="footer-container container grid">
                 <ul className="footer-links">
                     <li><a href="#home" className="footer-link">Home</a></li>
@@ -14,7 +22,7 @@ const Footer = () => {
                     <a href="#"> Madhan.</a>
                 </span>
             </div>
-        </footer>
+        </motion.footer>
     );
 };
 

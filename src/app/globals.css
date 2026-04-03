@@ -1,5 +1,19 @@
+@import "tailwindcss";
+
+
+
+@layer utilities {
+  .transform-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+}
+
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
+
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -14,6 +28,10 @@
   --text-color-light: hsl(0, 0%, 64%);
   --body-color: hsl(0, 0%, 87%);
   --container-color: hsl(0, 0%, 83%);
+
+  /*========== Curtain Colors ==========*/
+  --curtain-bg: hsl(0, 0%, 0%);
+  --curtain-text: hsl(0, 0%, 95%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -58,6 +76,39 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.intro-text {
+  overflow: hidden;
+  white-space: nowrap;
+  will-change: transform, opacity;
+}
+
+
+
+.intro-curtain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--curtain-bg);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--curtain-text);
+  font-size: 2rem;
+  font-weight: var(--font-bold);
+  pointer-events: none;
+  transition: background-color .4s, color .4s;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
 }
 
 body {
@@ -113,6 +164,10 @@ body.dark-theme{
   --text-color: hsl(0, 0%, 70%);
   --body-color: hsl(0, 0%, 8%);
   --container-color: hsl(0, 0%, 12%);
+
+  /*========== Curtain Colors ==========*/
+  --curtain-bg: var(--container-color);
+  --curtain-text: var(--first-color);
 }
 /*========== 
 	Color changes in some parts of 
@@ -564,6 +619,7 @@ body.dark-theme{
   border: 3px solid var(--black-color);
   color: var(--black-color);
   padding: 0.5rem;
+  font-weight: var(--font-medium);
   transition: border 0.4s, color 0.4s;
 }
 

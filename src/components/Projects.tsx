@@ -1,4 +1,6 @@
+"use client";
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
     const projectsData = [
@@ -34,15 +36,49 @@ const Projects = () => {
         }
     ];
 
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2
+            }
+        }
+    };
+
+    const cardVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { 
+            opacity: 1, 
+            y: 0,
+            transition: { duration: 0.6 }
+        }
+    };
+
     return (
         <section className="projects section" id="projects">
-            <h2 className="section-title-1">
+            <motion.h2 
+                className="section-title-1"
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+            >
                 <span>Projects.</span>
-            </h2>
+            </motion.h2>
 
-            <div className="projects-container container grid">
+            <motion.div 
+                className="projects-container container grid"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+            >
                 {projectsData.map((project, index) => (
-                    <article key={index} className="projects-card">
+                    <motion.article 
+                        key={index} 
+                        className="projects-card"
+                        variants={cardVariants}
+                    >
                         <div className="projects-image">
                             <img src={project.img} alt="image" className="projects-img" />
                             <a href="#" className="projects-button button">
@@ -62,9 +98,9 @@ const Projects = () => {
                                 <i className="ri-dribbble-line"></i>View
                             </a>
                         </div>
-                    </article>
+                    </motion.article>
                 ))}
-            </div>
+            </motion.div>
         </section>
     );
 };
