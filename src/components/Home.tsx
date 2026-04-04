@@ -98,8 +98,7 @@ const Home = () => {
                     transition={{ duration: 1, delay: 0.8 }}
                 >
                     <p className="home-description">
-                        <b>UI/UX Designer</b>, specializing in creating intuitive and 
-                        visually stunning digital experiences that solve complex user problems.
+                        I'm a passionate <b>UI/UX Designer</b> with a background in IT, blending technical expertise with creative design to build impactful, human-centered digital products.
                     </p>
 
                     <a href="#about" className="home-scroll">

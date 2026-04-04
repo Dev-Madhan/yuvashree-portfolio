@@ -69,17 +69,19 @@ const About = () => {
                     variants={fadeInMask}
                 >
                     <p className="about-description">
-                        Passionate about crafting <b>digital experiences</b> that are
-                        functional, aesthetically pleasing, and <b>user-centered</b>.
-                        My design philosophy is rooted in solving real problems through
-                        modern interface design and deep user research.
+                        I focus on crafting <b>intuitive and accessible</b> products through
+                        deep research and thoughtful prototyping, turning complex problems
+                        into elegant solutions for real-world impact.
                     </p>
 
                     <ul className="about-list">
                         <li className="about-item">
-                            <b>My Skills Are:</b> Figma, Adobe Creative Suite (XD, PS, AI),
-                            User Research, Information Architecture, Wireframing,
-                            Interactive Prototyping, & Visual Design.
+                            <b>Design Skills:</b> User Research, Wireframing,
+                            Prototyping, Visual Design, & Information Architecture.
+                        </li>
+                        <li className="about-item">
+                            <b>Creative Leadership:</b> Team Coordination, Event
+                            Management, Strategic Planning, & Technical Lead.
                         </li>
                     </ul>
 

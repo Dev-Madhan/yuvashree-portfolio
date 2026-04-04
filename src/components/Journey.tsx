@@ -4,28 +4,28 @@ import { motion, Variants } from 'framer-motion';
 
 const journeyData = [
     {
-        year: '2017 - 2019',
-        title: 'Visual Communication Graduate',
-        subtitle: 'State University',
-        description: 'Learned the fundamentals of visual design, color theory, and typography. Specialized in digital media and brand identity.',
+        year: 'Academic Core',
+        title: 'B.Tech Graduation',
+        subtitle: 'Information Technology',
+        description: 'Built a solid technical foundation, merging logical computing with human-centric design to create products that are as functional as they are beautiful.',
     },
     {
-        year: '2019 - 2021',
-        title: 'Junior UI Designer',
-        subtitle: 'Creative Agencies LLC',
-        description: 'Assisted in creating high-quality visual designs for digital products. Collaborated with developers to ensure design fidelity.',
+        year: 'Leadership',
+        title: 'Vistara Club Secretary',
+        subtitle: 'Tech & Design Leadership',
+        description: 'Spearheaded technical events and departmental initiatives, fostering cross-team collaboration and managing creative workflows for impactful results.',
     },
     {
-        year: '2021 - 2022',
-        title: 'Advanced UX Certification',
-        subtitle: 'UX Design Institute',
-        description: 'Completed an intensive program focused on user research, usability testing, and accessibility standards.',
+        year: 'Strategic Lead',
+        title: 'BIS Club Coordinator',
+        subtitle: 'Project Planning',
+        description: 'Orchestrated design and technical strategies for the IT Department, ensuring high standards across all departmental club activities and student engagements.',
     },
     {
-        year: '2022 - Present',
-        title: 'Senior UI/UX Designer',
-        subtitle: 'Freelance & Design Lead',
-        description: 'Leading end-to-end design processes for startups and enterprise clients. Focused on creating human-centric digital products.',
+        year: 'Event Director',
+        title: 'Technical Team Lead',
+        subtitle: 'Esperanza & Major Events',
+        description: 'Directed technical teams and coordinated event design for flagship initiatives, managing large-scale project execution from initial concept to final seamless delivery.',
     },
 ];
 
