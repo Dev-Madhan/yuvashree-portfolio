@@ -68,15 +68,17 @@ const About = () => {
                     variants={fadeInMask}
                 >
                     <p className="about-description">
-                        Passionate about creating <b>Web Pages</b> with
-                        <b>UI/UX User Interface</b>, I have years of experience and many
-                        clients are happy with the projects carried out.
+                        Passionate about crafting <b>digital experiences</b> that are 
+                        functional, aesthetically pleasing, and <b>user-centered</b>. 
+                        My design philosophy is rooted in solving real problems through 
+                        modern interface design and deep user research.
                     </p>
 
                     <ul className="about-list">
                         <li className="about-item">
-                            <b>My Skills Are:</b> HTML, CSS, JavaScript, React, Git &
-                            GitHub, Bootstrap, Flutter & Figma.
+                            <b>My Skills Are:</b> Figma, Adobe Creative Suite (XD, PS, AI), 
+                            User Research, Information Architecture, Wireframing, 
+                            Interactive Prototyping, & Visual Design.
                         </li>
                     </ul>
 

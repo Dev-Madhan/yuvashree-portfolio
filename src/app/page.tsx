@@ -7,6 +7,7 @@ import Services from '@/components/Services';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import Journey from '@/components/Journey';
+import Certificates from '@/components/Certificates';
 import Footer from '@/components/Footer';
 import ScrollUp from '@/components/ScrollUp';
 import gsap from 'gsap';
@@ -61,6 +62,7 @@ export default function Page() {
                 <Services />
                 <Projects />
                 <Journey />
+                <Certificates />
                 <Contact />
             </main>
             <Footer />

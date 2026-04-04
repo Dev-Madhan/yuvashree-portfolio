@@ -6,33 +6,33 @@ const Projects = () => {
     const projectsData = [
         {
             img: "/img/project-1.jpg",
-            subtitle: "Website",
-            title: "Restaurant Website",
-            description: "Project that you carry out in the design and structure of the layout, showing the design at the client's request."
+            subtitle: "Web UI",
+            title: "Restaurant Platform",
+            description: "Developed a comprehensive design system and responsive web interface focused on seamless food ordering journeys."
         },
         {
             img: "/img/project-2.jpg",
-            subtitle: "App",
-            title: "Yoga App",
-            description: "Project that you carry out in the design and structure of the layout, showing the design at the client's request."
+            subtitle: "Mobile UX",
+            title: "Yoga & Wellness App",
+            description: "An end-to-end UX project involving user research, wireframing, and interactive prototyping for a health-focused mobile application."
         },
         {
             img: "/img/project-3.jpg",
-            subtitle: "Website",
-            title: "Coffee Delivery Website",
-            description: "Project that you carry out in the design and structure of the layout, showing the design at the client's request."
+            subtitle: "E-Commerce",
+            title: "Coffee Delivery Experience",
+            description: "Crafted a visually rich e-commerce interface with a focus on product storytelling and high-conversion checkout flows."
         },
         {
             img: "/img/project-1.jpg",
-            subtitle: "App",
-            title: "Fast Food App",
-            description: "Project that you carry out in the design and structure of the layout, showing the design at the client's request."
+            subtitle: "Mobile Design",
+            title: "Food Delivery Dashboard",
+            description: "Designed an intuitive courier dashboard with real-time tracking interfaces and optimized information architecture."
         },
         {
             img: "/img/project-2.jpg",
-            subtitle: "Website",
-            title: "Barbershop Website",
-            description: "Project that you carry out in the design and structure of the layout, showing the design at the client's request."
+            subtitle: "Visual Identity",
+            title: "Barbershop Branding",
+            description: "Created a cohesive digital identity and booking interface, blending traditional aesthetics with modern user experience."
         }
     ];
 

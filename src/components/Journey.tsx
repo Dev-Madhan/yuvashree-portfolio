@@ -5,27 +5,27 @@ import { motion, Variants } from 'framer-motion';
 const journeyData = [
     {
         year: '2017 - 2019',
-        title: 'Computer Science Graduate',
+        title: 'Visual Communication Graduate',
         subtitle: 'State University',
-        description: 'Earned degree with distinction. Participated in various coding competitions and built several open-source projects.',
+        description: 'Learned the fundamentals of visual design, color theory, and typography. Specialized in digital media and brand identity.',
     },
     {
         year: '2019 - 2021',
-        title: 'Lead Frontend Developer',
-        subtitle: 'Tech Solutions Inc.',
-        description: 'Led a team of frontend developers to build scalable enterprise applications. Optimized performance and improved maintainability.',
+        title: 'Junior UI Designer',
+        subtitle: 'Creative Agencies LLC',
+        description: 'Assisted in creating high-quality visual designs for digital products. Collaborated with developers to ensure design fidelity.',
     },
     {
         year: '2021 - 2022',
-        title: 'UI/UX Design Course',
-        subtitle: 'Design Certification',
-        description: 'Mastered principles of user interface design, user experience research, and prototyping using Figma and Adobe Creative Suite.',
+        title: 'Advanced UX Certification',
+        subtitle: 'UX Design Institute',
+        description: 'Completed an intensive program focused on user research, usability testing, and accessibility standards.',
     },
     {
         year: '2022 - Present',
-        title: 'Full Stack Developer',
-        subtitle: 'Freelance & Projects',
-        description: 'Developing high-quality web and mobile solutions using React, Next.js, and modern technologies. Focused on performance and user experience.',
+        title: 'Senior UI/UX Designer',
+        subtitle: 'Freelance & Design Lead',
+        description: 'Leading end-to-end design processes for startups and enterprise clients. Focused on creating human-centric digital products.',
     },
 ];
 

@@ -45,7 +45,6 @@ const Services = () => {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-50px" }}
             >
-                {/* Services Card 1 */}
                 <motion.article className="services-card" variants={fadeInMask} whileHover={{ y: -8, transition: { duration: 0.4, ease: "easeOut" } }}>
                     <div className="services-border"></div>
                     <div className="services-content">
@@ -53,10 +52,10 @@ const Services = () => {
                             <div className="services-box"></div>
                             <i className="bx bx-layout"></i>
                         </div>
-                        <h2 className="services-title">Web Design</h2>
+                        <h2 className="services-title">UI Design</h2>
                         <p className="services-description">
-                            Beautiful and elegant designs with interfaces that are
-                            intuitive, efficient and pleasant to use for the user.
+                            Creating high-fidelity mockups and visually 
+                            compelling interfaces for web and mobile products.
                         </p>
                     </div>
                 </motion.article>
@@ -67,12 +66,12 @@ const Services = () => {
                     <div className="services-content">
                         <div className="services-icon">
                             <div className="services-box"></div>
-                            <i className="bx bx-code-alt"></i>
+                            <i className="bx bx-search-alt"></i>
                         </div>
-                        <h2 className="services-title">Development</h2>
+                        <h2 className="services-title">UX Research</h2>
                         <p className="services-description">
-                            Custom web development tailored to your specifications, designed
-                            to provide a flawless user experience.
+                            Conducting user interviews, surveys, and usability 
+                            testing to validate design decisions.
                         </p>
                     </div>
                 </motion.article>
@@ -83,12 +82,12 @@ const Services = () => {
                     <div className="services-content">
                         <div className="services-icon">
                             <div className="services-box"></div>
-                            <i className="bx bx-mobile-alt"></i>
+                            <i className="bx bx-shape-square"></i>
                         </div>
-                        <h2 className="services-title">Mobile App</h2>
+                        <h2 className="services-title">Prototyping</h2>
                         <p className="services-description">
-                            Design and transform website projects into mobile apps to
-                            provide a seamless user experience.
+                            Developing interactive prototypes to map out user 
+                            flows and demonstrate product functionality.
                         </p>
                     </div>
                 </motion.article>

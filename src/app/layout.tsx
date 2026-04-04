@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Yuvashree - Portfolio",
-  description: "Frontend Developer Portfolio",
+  description: "UI/UX Designer Portfolio",
 };
 
 export default function RootLayout({

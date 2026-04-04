@@ -98,8 +98,8 @@ const Home = () => {
                     transition={{ duration: 1, delay: 0.8 }}
                 >
                     <p className="home-description">
-                        <b>Frontend Developer</b>, with knowledge in web development and
-                        design, I offer the best projects resulting in quality work.
+                        <b>UI/UX Designer</b>, specializing in creating intuitive and 
+                        visually stunning digital experiences that solve complex user problems.
                     </p>
 
                     <a href="#about" className="home-scroll">
