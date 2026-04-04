@@ -1,16 +1,17 @@
 "use client";
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
-
+import { SendIcon } from './ui/send';
+import { DownloadIcon } from './ui/download';
 const About = () => {
     const fadeInMask: Variants = {
         hidden: { opacity: 0, y: 30 },
-        visible: { 
-            opacity: 1, 
+        visible: {
+            opacity: 1,
             y: 0,
-            transition: { 
-                duration: 1.2, 
-                ease: [0.16, 1, 0.3, 1] as const 
+            transition: {
+                duration: 1.2,
+                ease: [0.16, 1, 0.3, 1] as const
             }
         }
     };
@@ -28,14 +29,14 @@ const About = () => {
 
     return (
         <section className="about section" id="about">
-            <motion.div 
+            <motion.div
                 className="about-container container grid"
                 variants={staggerContainer}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
             >
-                <motion.h2 
+                <motion.h2
                     className="section-title-1"
                     variants={fadeInMask}
                 >
@@ -43,7 +44,7 @@ const About = () => {
                 </motion.h2>
 
                 <div className="about-profile">
-                    <motion.div 
+                    <motion.div
                         className="about-image"
                         variants={fadeInMask}
                     >
@@ -63,29 +64,29 @@ const About = () => {
                     </motion.div>
                 </div>
 
-                <motion.div 
+                <motion.div
                     className="about-info"
                     variants={fadeInMask}
                 >
                     <p className="about-description">
-                        Passionate about crafting <b>digital experiences</b> that are 
-                        functional, aesthetically pleasing, and <b>user-centered</b>. 
-                        My design philosophy is rooted in solving real problems through 
+                        Passionate about crafting <b>digital experiences</b> that are
+                        functional, aesthetically pleasing, and <b>user-centered</b>.
+                        My design philosophy is rooted in solving real problems through
                         modern interface design and deep user research.
                     </p>
 
                     <ul className="about-list">
                         <li className="about-item">
-                            <b>My Skills Are:</b> Figma, Adobe Creative Suite (XD, PS, AI), 
-                            User Research, Information Architecture, Wireframing, 
+                            <b>My Skills Are:</b> Figma, Adobe Creative Suite (XD, PS, AI),
+                            User Research, Information Architecture, Wireframing,
                             Interactive Prototyping, & Visual Design.
                         </li>
                     </ul>
 
                     <div className="about-buttons">
                         <a href="#contact" className="button">
-                            <i className="bx bx-paper-plane"></i>
-                            Contact Me
+                            <SendIcon size={20} />
+                            Contact
                         </a>
 
                         <a
@@ -93,8 +94,8 @@ const About = () => {
                             target="_blank"
                             className="button-ghost"
                             download="resume.pdf">
-                            <i className="ri-download-line"></i>
-                            Download Resume
+                            <DownloadIcon size={20} />
+                            Resume
                         </a>
                     </div>
                 </motion.div>

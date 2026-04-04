@@ -1,26 +1,55 @@
 "use client";
 import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
 import { motion, Variants } from 'framer-motion';
+import { ShinyButton } from '@/components/ui/shiny-button';
+import { toast } from 'sonner';
 
 const Contact = () => {
     const form = useRef<HTMLFormElement>(null);
-    const [contactMessage, setContactMessage] = useState('');
+    const [isSending, setIsSending] = useState(false);
 
-    const sendEmail = (e: React.FormEvent) => {
+    const sendEmail = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        if (form.current) {
-            emailjs.sendForm('service_kzkr5bl', 'template_emgzv0m', form.current, '0v7LSRfZsCkuD-BzT')
-                .then(() => {
-                    setContactMessage('Message sent successfully ✅');
-                    setTimeout(() => {
-                        setContactMessage('');
-                    }, 5000);
-                    form.current?.reset();
-                }, () => {
-                    setContactMessage('Message not sent (service error) ❌');
+        if (!form.current) return;
+
+        const formData = new FormData(form.current);
+        const payload = {
+            name:    formData.get('user_name')    as string,
+            email:   formData.get('user_email')   as string,
+            subject: formData.get('user_subject') as string,
+            message: formData.get('user_message') as string,
+        };
+
+        setIsSending(true);
+
+        try {
+            const res = await fetch('/api/contact', {
+                method:  'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body:    JSON.stringify(payload),
+            });
+
+            if (res.ok) {
+                toast.success('Message sent!', {
+                    description: "I'll get back to you as soon as possible.",
+                    duration:    5000,
                 });
+                form.current.reset();
+            } else {
+                const data = await res.json();
+                toast.error('Failed to send message', {
+                    description: data?.error ?? 'Please try again later.',
+                    duration:    5000,
+                });
+            }
+        } catch {
+            toast.error('Network error', {
+                description: 'Could not reach the server. Check your connection.',
+                duration:    5000,
+            });
+        } finally {
+            setIsSending(false);
         }
     };
 
@@ -62,10 +91,10 @@ const Contact = () => {
                 >
                     <h2 className="section-title-2">Contact Me.</h2>
                     <p className="contact-description-1">
-                        I will read all emails. Send me any message you want and I'll get back to you.
+                        I will read all emails. Send me any message you want and I&apos;ll get back to you.
                     </p>
                     <p className="contact-description-2">
-                        I need your <b>Name</b> and <b>Email Address</b>, but you won't receive anything other than your reply.
+                        I need your <b>Name</b> and <b>Email Address</b> to respond to your inquiry and send you a confirmation.
                     </p>
                     <div className="geometric-box"></div>
                 </motion.div>
@@ -99,14 +128,13 @@ const Contact = () => {
                             <label htmlFor="message" className="contact-label">Message</label>
                         </div>
 
-                        <p className="contact-message" id="contact-message">{contactMessage}</p>
-
-                        <button 
+                        <ShinyButton 
                             type="submit" 
                             className="contact-button button"
+                            disabled={isSending}
                         >
-                            <i className="ri-send-plane-line"></i> Send Message
-                        </button>
+                            {isSending ? 'Sending…' : 'Send Message'}
+                        </ShinyButton>
                     </form>
                 </motion.div>
 
@@ -117,8 +145,8 @@ const Contact = () => {
                     <img src="/img/curved-arrow.svg" alt="" className="contact-social-arrow" />
                     <div className="contact-social-data">
                         <div>
-                            <p className="contact-social-description-1">Does not send emails</p>
-                            <p className="contact-social-description-2">Write me on my social networks</p>
+                            <p className="contact-social-description-1">Direct message</p>
+                            <p className="contact-social-description-2">Or write me on my social networks</p>
                         </div>
 
                         <div className="contact-social-links">
