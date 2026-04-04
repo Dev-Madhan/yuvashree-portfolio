@@ -49,7 +49,7 @@ const About = () => {
                         variants={fadeInMask}
                     >
                         <img
-                            src="/img/about-perfil.jpg"
+                            src="/img/about-image.jpg"
                             alt="about image"
                             className="about-img" />
 

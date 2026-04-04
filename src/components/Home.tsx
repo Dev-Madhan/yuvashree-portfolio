@@ -46,7 +46,7 @@ const Home = () => {
                         transition={{ duration: 1, delay: 0.4 }}
                     >
                         <img
-                            src="/img/home-perfil.jpg"
+                            src="/img/hero-image.jpg"
                             alt="home image"
                             className="home-img" />
 
