@@ -4,34 +4,40 @@ import { motion, Variants } from 'framer-motion';
 
 const certificatesData = [
     {
-        title: "Google UX Design Professional",
-        issuer: "Coursera",
+        title: "Laravel Full Stack Development",
+        issuer: "CAPNIS Infotech Pvt Ltd",
+        year: "2024",
+        description: "Intensive course on full-stack web development using Laravel framework and modern web standards."
+    },
+    {
+        title: "Cybersecurity & Ethical Hacking",
+        issuer: "NSIC Technical Services",
+        year: "2024",
+        description: "Internship focused on ethical hacking concepts, network security, and defensive strategies."
+    },
+    {
+        title: "IoT Solutions Developer",
+        issuer: "Edify Techno Solutions",
+        year: "2024",
+        description: "Developed IoT communication protocols and real-time automation dashboards using Blynk IoT."
+    },
+    {
+        title: "Techno Realm 2.0 - 3rd Place",
+        issuer: "Veltech Hightech",
+        year: "2025",
+        description: "Won 3rd place in Paper Presentation for 'A MultiLayer Input Approach to Enhance CDSS for Breast Cancer'."
+    },
+    {
+        title: "Techyugam 2023 - 1st Prize",
+        issuer: "Veltech Multitech",
         year: "2023",
-        description: "Foundational concepts of UX design, empathizing with users, and creating high-fidelity wireframes."
+        description: "Secured first prize in the Poster Presentation category at the Techyugam intercollege event."
     },
     {
-        title: "Interaction Design Specialization",
-        issuer: "UC San Diego",
-        year: "2022",
-        description: "Mastering the design cycle, from uncovering user needs to designing and evaluating interfaces."
-    },
-    {
-        title: "UI / UX Design Specialization",
-        issuer: "CalArts",
-        year: "2021",
-        description: "Visual literacy, wireframing, and UI/UX design conventions for dynamic user experiences."
-    },
-    {
-        title: "Front-End Web UI Frameworks",
-        issuer: "Hong Kong University",
-        year: "2022",
-        description: "Implementing responsive web design using Bootstrap and managing state in web applications."
-    },
-    {
-        title: "Human-Centered Design",
-        issuer: "IDEO.org",
-        year: "2020",
-        description: "Prototyping methodologies and ideation processes focusing on keeping users at the center."
+        title: "Esperanza 2024 - 2nd Prize",
+        issuer: "Veltech Multitech",
+        year: "2024",
+        description: "Awarded second prize for creative Poster Design excellence at the Esperanza cultural festival."
     }
 ];
 
