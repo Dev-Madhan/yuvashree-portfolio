@@ -69,9 +69,9 @@ const About = () => {
                     variants={fadeInMask}
                 >
                     <p className="about-description">
-                        I focus on crafting <b>intuitive and accessible</b> products through
-                        deep research and thoughtful prototyping, turning complex problems
-                        into elegant solutions for real-world impact.
+                        I am an aspiring <b>UI/UX Designer</b> with a B.Tech in IT, combining technical knowledge 
+                        with creative thinking to design intuitive, accessible, and impactful digital solutions 
+                        that solve real-world problems.
                     </p>
 
                     <ul className="about-list">
@@ -80,8 +80,8 @@ const About = () => {
                             Prototyping, Visual Design, & Information Architecture.
                         </li>
                         <li className="about-item">
-                            <b>Creative Leadership:</b> Team Coordination, Event
-                            Management, Strategic Planning, & Technical Lead.
+                            <b>Creative Leadership:</b> Tech Club Secretary, Event
+                            Coordination, Technical Team Lead, & Designing Team Coordinator.
                         </li>
                     </ul>
 
