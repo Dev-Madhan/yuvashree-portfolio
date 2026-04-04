@@ -1,21 +1,21 @@
 "use client";
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 const About = () => {
-    const fadeInMask = {
+    const fadeInMask: Variants = {
         hidden: { opacity: 0, y: 30 },
         visible: { 
             opacity: 1, 
             y: 0,
             transition: { 
                 duration: 1.2, 
-                ease: [0.16, 1, 0.3, 1] 
+                ease: [0.16, 1, 0.3, 1] as const 
             }
         }
     };
 
-    const staggerContainer = {
+    const staggerContainer: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,

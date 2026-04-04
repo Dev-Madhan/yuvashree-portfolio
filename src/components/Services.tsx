@@ -1,21 +1,21 @@
 "use client";
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 const Services = () => {
-    const fadeInMask = {
+    const fadeInMask: Variants = {
         hidden: { opacity: 0, y: 40 },
         visible: { 
             opacity: 1, 
             y: 0,
             transition: { 
                 duration: 1.2, 
-                ease: [0.16, 1, 0.3, 1] 
+                ease: [0.16, 1, 0.3, 1] as const
             }
         }
     };
 
-    const staggerContainer = {
+    const staggerContainer: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -33,7 +33,7 @@ const Services = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
             >
                 <span>Services.</span>
             </motion.h2>

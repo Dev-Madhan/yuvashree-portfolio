@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 const Contact = () => {
     const form = useRef<HTMLFormElement>(null);
@@ -24,19 +24,19 @@ const Contact = () => {
         }
     };
 
-    const fadeInMask = {
+    const fadeInMask: Variants = {
         hidden: { opacity: 0, y: 30 },
         visible: { 
             opacity: 1, 
             y: 0,
             transition: { 
                 duration: 1.2, 
-                ease: [0.16, 1, 0.3, 1] 
+                ease: [0.16, 1, 0.3, 1] as const
             }
         }
     };
 
-    const staggerContainer = {
+    const staggerContainer: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,

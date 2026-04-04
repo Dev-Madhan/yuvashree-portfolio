@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 const journeyData = [
     {
@@ -30,19 +30,19 @@ const journeyData = [
 ];
 
 const Journey = () => {
-    const fadeInMask = {
+    const fadeInMask: Variants = {
         hidden: { opacity: 0, y: 30 },
         visible: { 
             opacity: 1, 
             y: 0,
             transition: { 
                 duration: 1.2, 
-                ease: [0.16, 1, 0.3, 1] 
+                ease: [0.16, 1, 0.3, 1] as const
             }
         }
     };
 
-    const staggerContainer = {
+    const staggerContainer: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -60,7 +60,7 @@ const Journey = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
             >
                 <span>My Journey.</span>
             </motion.h2>
@@ -83,7 +83,7 @@ const Journey = () => {
                                 className="journey-dot"
                                 initial={{ scale: 0 }}
                                 whileInView={{ scale: 1 }}
-                                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.3 + (index * 0.1) }}
+                                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as const, delay: 0.3 + (index * 0.1) }}
                             ></motion.div>
                             <div className="journey-card">
                                 <div className="journey-header">
