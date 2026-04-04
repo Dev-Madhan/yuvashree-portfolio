@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import Header from '@/components/Header';
 import Home from '@/components/Home';
 import About from '@/components/About';
-import Services from '@/components/Services';
+import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import Journey from '@/components/Journey';
@@ -59,7 +59,7 @@ export default function Page() {
             <main className="main">
                 <Home />
                 <About />
-                <Services />
+                <Skills />
                 <Projects />
                 <Journey />
                 <Certificates />
