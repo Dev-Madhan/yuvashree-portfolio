@@ -6,7 +6,6 @@ import About from '@/components/About';
 import Services from '@/components/Services';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
-import Journey from '@/components/Journey';
 import Footer from '@/components/Footer';
 import ScrollUp from '@/components/ScrollUp';
 import gsap from 'gsap';
@@ -17,10 +16,10 @@ export default function Page() {
 
     useEffect(() => {
         if (!containerRef.current) return;
-
+        
         const q = gsap.utils.selector(containerRef.current);
         const tl = gsap.timeline();
-
+        
         tl.from(q(".intro-char-wrapper"), {
             yPercent: 100,
             opacity: 0,
@@ -28,19 +27,19 @@ export default function Page() {
             duration: 0.8,
             ease: "power2.out"
         })
-            .to(q(".intro-curtain"), {
-                yPercent: -100,
-                duration: 1.2,
-                ease: "power4.inOut",
-                delay: 0.3
-            })
-            .from(".header", {
-                yPercent: -100,
-                opacity: 0,
-                duration: 0.8,
-                ease: "power3.out",
-                clearProps: "all"
-            }, "-=0.4");
+        .to(q(".intro-curtain"), {
+            yPercent: -100,
+            duration: 1.2,
+            ease: "power4.inOut",
+            delay: 0.3
+        })
+        .from(".header", {
+            yPercent: -100,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+            clearProps: "all"
+        }, "-=0.4");
     }, []);
 
     const nameText = "YUVASHREE";
@@ -60,7 +59,6 @@ export default function Page() {
                 <About />
                 <Services />
                 <Projects />
-                <Journey />
                 <Contact />
             </main>
             <Footer />

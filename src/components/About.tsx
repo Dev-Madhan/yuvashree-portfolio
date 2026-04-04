@@ -3,15 +3,41 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const About = () => {
+    const fadeInMask = {
+        hidden: { opacity: 0, y: 30 },
+        visible: { 
+            opacity: 1, 
+            y: 0,
+            transition: { 
+                duration: 1.2, 
+                ease: [0.16, 1, 0.3, 1] 
+            }
+        }
+    };
+
+    const staggerContainer = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.15,
+                delayChildren: 0.1
+            }
+        }
+    };
+
     return (
         <section className="about section" id="about">
-            <div className="about-container container grid">
+            <motion.div 
+                className="about-container container grid"
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+            >
                 <motion.h2 
                     className="section-title-1"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
+                    variants={fadeInMask}
                 >
                     <span>About Me.</span>
                 </motion.h2>
@@ -19,10 +45,7 @@ const About = () => {
                 <div className="about-profile">
                     <motion.div 
                         className="about-image"
-                        initial={{ opacity: 0, x: 100 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
+                        variants={fadeInMask}
                     >
                         <img
                             src="/img/about-perfil.jpg"
@@ -42,10 +65,7 @@ const About = () => {
 
                 <motion.div 
                     className="about-info"
-                    initial={{ opacity: 0, x: -100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
+                    variants={fadeInMask}
                 >
                     <p className="about-description">
                         Passionate about creating <b>Web Pages</b> with
@@ -76,7 +96,7 @@ const About = () => {
                         </a>
                     </div>
                 </motion.div>
-            </div>
+            </motion.div>
         </section>
     );
 };

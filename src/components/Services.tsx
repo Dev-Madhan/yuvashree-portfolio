@@ -3,45 +3,50 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Services = () => {
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2
+    const fadeInMask = {
+        hidden: { opacity: 0, y: 40 },
+        visible: { 
+            opacity: 1, 
+            y: 0,
+            transition: { 
+                duration: 1.2, 
+                ease: [0.16, 1, 0.3, 1] 
             }
         }
     };
 
-    const cardVariants = {
-        hidden: { opacity: 0, scale: 0.8 },
-        visible: { 
-            opacity: 1, 
-            scale: 1,
-            transition: { duration: 0.5 }
+    const staggerContainer = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+                delayChildren: 0.1
+            }
         }
     };
 
     return (
-        <section className="services section">
+        <section className="services section" id="services">
             <motion.h2 
                 className="section-title-2"
-                initial={{ opacity: 0, y: -20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
+                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             >
                 <span>Services.</span>
             </motion.h2>
 
             <motion.div 
                 className="services-container container grid"
-                variants={containerVariants}
+                variants={staggerContainer}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
             >
                 {/* Services Card 1 */}
-                <motion.article className="services-card" variants={cardVariants}>
+                <motion.article className="services-card" variants={fadeInMask} whileHover={{ y: -8, transition: { duration: 0.4, ease: "easeOut" } }}>
                     <div className="services-border"></div>
                     <div className="services-content">
                         <div className="services-icon">
@@ -57,7 +62,7 @@ const Services = () => {
                 </motion.article>
 
                 {/* Services Card 2 */}
-                <motion.article className="services-card" variants={cardVariants}>
+                <motion.article className="services-card" variants={fadeInMask} whileHover={{ y: -8, transition: { duration: 0.4, ease: "easeOut" } }}>
                     <div className="services-border"></div>
                     <div className="services-content">
                         <div className="services-icon">
@@ -73,7 +78,7 @@ const Services = () => {
                 </motion.article>
 
                 {/* Services Card 3 */}
-                <motion.article className="services-card" variants={cardVariants}>
+                <motion.article className="services-card" variants={fadeInMask} whileHover={{ y: -8, transition: { duration: 0.4, ease: "easeOut" } }}>
                     <div className="services-border"></div>
                     <div className="services-content">
                         <div className="services-icon">

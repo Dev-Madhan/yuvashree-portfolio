@@ -11,7 +11,6 @@ const Contact = () => {
         e.preventDefault();
 
         if (form.current) {
-            // serviceID - templateID - #form - publicKey
             emailjs.sendForm('service_kzkr5bl', 'template_emgzv0m', form.current, '0v7LSRfZsCkuD-BzT')
                 .then(() => {
                     setContactMessage('Message sent successfully ✅');
@@ -25,15 +24,41 @@ const Contact = () => {
         }
     };
 
+    const fadeInMask = {
+        hidden: { opacity: 0, y: 30 },
+        visible: { 
+            opacity: 1, 
+            y: 0,
+            transition: { 
+                duration: 1.2, 
+                ease: [0.16, 1, 0.3, 1] 
+            }
+        }
+    };
+
+    const staggerContainer = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.15,
+                delayChildren: 0.1
+            }
+        }
+    };
+
     return (
         <section className="contact section" id="contact">
-            <div className="contact-container container grid">
+            <motion.div 
+                className="contact-container container grid"
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+            >
                 <motion.div 
                     className="contact-data"
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
+                    variants={fadeInMask}
                 >
                     <h2 className="section-title-2">Contact Me.</h2>
                     <p className="contact-description-1">
@@ -47,10 +72,7 @@ const Contact = () => {
 
                 <motion.div 
                     className="contact-mail"
-                    initial={{ opacity: 0, x: 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
+                    variants={fadeInMask}
                 >
                     <h2 className="contact-title">Send Me A Message</h2>
 
@@ -79,7 +101,10 @@ const Contact = () => {
 
                         <p className="contact-message" id="contact-message">{contactMessage}</p>
 
-                        <button type="submit" className="contact-button button">
+                        <button 
+                            type="submit" 
+                            className="contact-button button"
+                        >
                             <i className="ri-send-plane-line"></i> Send Message
                         </button>
                     </form>
@@ -87,10 +112,7 @@ const Contact = () => {
 
                 <motion.div 
                     className="contact-social"
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
+                    variants={fadeInMask}
                 >
                     <img src="/img/curved-arrow.svg" alt="" className="contact-social-arrow" />
                     <div className="contact-social-data">
@@ -112,7 +134,7 @@ const Contact = () => {
                         </div>
                     </div>
                 </motion.div>
-            </div>
+            </motion.div>
         </section>
     );
 };

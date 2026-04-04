@@ -36,22 +36,26 @@ const Projects = () => {
         }
     ];
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2
-            }
-        }
-    };
-
-    const cardVariants = {
+    const fadeInMask = {
         hidden: { opacity: 0, y: 50 },
         visible: { 
             opacity: 1, 
             y: 0,
-            transition: { duration: 0.6 }
+            transition: { 
+                duration: 1.2, 
+                ease: [0.16, 1, 0.3, 1] 
+            }
+        }
+    };
+
+    const staggerContainer = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.15,
+                delayChildren: 0.1
+            }
         }
     };
 
@@ -59,25 +63,31 @@ const Projects = () => {
         <section className="projects section" id="projects">
             <motion.h2 
                 className="section-title-1"
-                initial={{ opacity: 0, y: -20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
+                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             >
                 <span>Projects.</span>
             </motion.h2>
 
             <motion.div 
                 className="projects-container container grid"
-                variants={containerVariants}
+                variants={staggerContainer}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
             >
                 {projectsData.map((project, index) => (
                     <motion.article 
                         key={index} 
                         className="projects-card"
-                        variants={cardVariants}
+                        variants={fadeInMask}
+                        whileHover={{ 
+                            y: -12,
+                            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+                            transition: { duration: 0.4, ease: "easeOut" }
+                        }}
                     >
                         <div className="projects-image">
                             <img src={project.img} alt="image" className="projects-img" />

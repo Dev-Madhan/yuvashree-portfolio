@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { ShinyButton } from '@/components/ui/shiny-button';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -81,7 +82,13 @@ const Header = () => {
                             <a href="#projects" className="nav-link" onClick={() => setIsMenuOpen(false)}>Projects</a>
                         </li>
                         <li className="nav-item">
-                            <a href="/resume/resume.pdf" className="nav-link nav-link-button" download="resume.pdf" onClick={() => setIsMenuOpen(false)}>Resume</a>
+                            <a
+                                href="/resume/resume.pdf"
+                                download="resume.pdf"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                <ShinyButton className="nav-link nav-link-button">Resume</ShinyButton>
+                            </a>
                         </li>
                     </ul>
 
