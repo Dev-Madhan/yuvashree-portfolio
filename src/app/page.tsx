@@ -5,6 +5,7 @@ import Home from '@/components/Home';
 import About from '@/components/About';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
+import Gallery from '@/components/Gallery';
 import Contact from '@/components/Contact';
 import Journey from '@/components/Journey';
 import Certificates from '@/components/Certificates';
@@ -61,6 +62,7 @@ export default function Page() {
                 <About />
                 <Skills />
                 <Projects />
+                <Gallery />
                 <Journey />
                 <Certificates />
                 <Contact />
