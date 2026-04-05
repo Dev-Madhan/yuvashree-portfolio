@@ -102,13 +102,13 @@ const Home = () => {
                         transition={{ duration: 0.8, delay: 0.6 }}
                     >
                         <a
-                            href="https://www.instagram.com/"
+                            href="https://www.instagram.com/yuvashree_maniarasu"
                             target="_blank"
                             className="home-social-link"
                         ><i className="bx bxl-instagram"></i
                         ></a>
                         <a
-                            href="https://www.linkedin.com/"
+                            href="https://www.linkedin.com/in/yuva-shree-maniarasu-profile"
                             target="_blank"
                             className="home-social-link">
                             <i className="bx bxl-linkedin"></i>

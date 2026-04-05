@@ -177,13 +177,13 @@ const Contact = () => {
                         </div>
 
                         <div className="contact-social-links">
-                            <a href="https://www.facebook.com/" target="_blank" className="contact-social-link">
+                            <a href="https://www.facebook.com/profile.php?id=100017484733852" target="_blank" className="contact-social-link">
                                 <i className="bx bxl-facebook-circle"></i>
                             </a>
-                            <a href="https://www.instagram.com/" target="_blank" className="contact-social-link">
+                            <a href="https://www.instagram.com/yuvashree_maniarasu" target="_blank" className="contact-social-link">
                                 <i className="bx bxl-instagram"></i>
                             </a>
-                            <a href="https://www.linkedin.com/" target="_blank" className="contact-social-link">
+                            <a href="https://www.linkedin.com/in/yuva-shree-maniarasu-profile" target="_blank" className="contact-social-link">
                                 <i className="bx bxl-linkedin-square"></i>
                             </a>
                         </div>
