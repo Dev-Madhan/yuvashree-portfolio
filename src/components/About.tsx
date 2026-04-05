@@ -1,9 +1,12 @@
 "use client";
-import React from 'react';
-import { motion, Variants } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, Variants, useInView } from 'framer-motion';
 import { SendIcon } from './ui/send';
 import { DownloadIcon } from './ui/download';
+import { TextEffect } from '@/components/core/text-effect';
 const About = () => {
+    const descRef = useRef<HTMLDivElement>(null);
+    const inView = useInView(descRef, { once: true, margin: '-80px' });
     const fadeInMask: Variants = {
         hidden: { opacity: 0, y: 30 },
         visible: {
@@ -67,12 +70,16 @@ const About = () => {
                 <motion.div
                     className="about-info"
                     variants={fadeInMask}
+                    ref={descRef}
                 >
-                    <p className="about-description">
-                        I am an aspiring <b>UI/UX Designer</b> with a B.Tech in IT, combining technical knowledge 
-                        with creative thinking to design intuitive, accessible, and impactful digital solutions 
-                        that solve real-world problems.
-                    </p>
+                    <TextEffect
+                        per='char'
+                        preset='fade'
+                        trigger={inView}
+                        className="about-description"
+                    >
+                        {`I am an aspiring UI/UX Designer with a B.Tech in IT, combining technical knowledge with creative thinking to design intuitive, accessible, and impactful digital solutions that solve real-world problems.`}
+                    </TextEffect>
 
                     <ul className="about-list">
                         <li className="about-item">

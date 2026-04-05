@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
+import { TextEffect } from '@/components/core/text-effect';
 
 const Home = () => {
     const sectionRef = useRef<HTMLElement>(null);
@@ -97,9 +98,14 @@ const Home = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 0.8 }}
                 >
-                    <p className="home-description">
-                        I'm a passionate <b>UI/UX Designer</b> with a background in IT, blending technical expertise with creative design to build impactful, human-centered digital products.
-                    </p>
+                    <TextEffect
+                        per='char'
+                        preset='fade'
+                        delay={1.2}
+                        className="home-description"
+                    >
+                        {`I'm a passionate UI/UX Designer with a background in IT, blending technical expertise with creative design to build impactful, human-centered digital products.`}
+                    </TextEffect>
 
                     <a href="#about" className="home-scroll">
                         <div className="home-scroll-box">
