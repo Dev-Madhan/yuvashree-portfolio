@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const galleryImages = [
     { src: "/gallery/gal - (1).jpg", label: "Induction day 2025" },
     { src: "/gallery/gal - (2).jpg", label: "Tech Club Coordinator" },
-    { src: "/gallery/gal - (3).jpg", label: "Esperanza 2026" },
+    { src: "/gallery/gal - (3).jpg", label: "Alumini Meet 2025" },
     { src: "/gallery/gal - (4).jpg", label: "Esperanza 2026" },
     { src: "/gallery/gal - (5).jpg", label: "Speech" },
     { src: "/gallery/gal - (6).jpg", label: "Esperanza 2026" },
