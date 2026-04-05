@@ -7,7 +7,7 @@ const galleryImages = [
     { src: "/gallery/gal - (2).jpg", label: "Tech Club Coordinator" },
     { src: "/gallery/gal - (3).jpg", label: "Alumini Meet 2025" },
     { src: "/gallery/gal - (4).jpg", label: "Esperanza 2026" },
-    { src: "/gallery/gal - (5).jpg", label: "Speech" },
+    { src: "/gallery/gal - (5).jpg", label: "Orchestration" },
     { src: "/gallery/gal - (6).jpg", label: "Esperanza 2026" },
     { src: "/gallery/gal - (7).jpg", label: "Department Event" },
     { src: "/gallery/gal - (8).jpg", label: "Technical Team" },
