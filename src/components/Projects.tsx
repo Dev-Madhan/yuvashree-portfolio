@@ -6,34 +6,39 @@ const Projects = () => {
     const projectsData = [
         {
             img: "/img/project-1.jpg",
-            subtitle: "Web UI",
-            title: "Restaurant Platform",
-            description: "Developed a comprehensive design system and responsive web interface focused on seamless food ordering journeys."
+            subtitle: "Graphic Design",
+            title: "Custom Invitations",
+            description: "Designed elegant and personalized digital invitations for various special occasions including weddings, engagements, and housewarming ceremonies.",
+            link: "https://drive.google.com/drive/folders/1dWrSNHR5KxdIH7rmQ96ycNtzPonux1_u?usp=drive_link"
         },
         {
             img: "/img/project-2.jpg",
-            subtitle: "Mobile UX",
-            title: "Yoga & Wellness App",
-            description: "An end-to-end UX project involving user research, wireframing, and interactive prototyping for a health-focused mobile application."
+            subtitle: "Editorial Design",
+            title: "Magazine Layouts",
+            description: "Designed engaging, professional layouts for tech magazines like Codesprintz'24 and SPARK'23, balancing aesthetics with content readability.",
+            link: "https://drive.google.com/drive/folders/1PYcv13dzitLiwV_6iv0PYY7Lp8TQoGCa?usp=drive_link"
         },
         {
             img: "/img/project-3.jpg",
-            subtitle: "E-Commerce",
-            title: "Coffee Delivery Experience",
-            description: "Crafted a visually rich e-commerce interface with a focus on product storytelling and high-conversion checkout flows."
+            subtitle: "Editorial Design",
+            title: "Newsletters",
+            description: "Structured and designed professional newsletters to effectively communicate highlights and updates, ensuring readability and brand consistency.",
+            link: "https://drive.google.com/drive/folders/18D-kY4VByvv914p7QnvZG14SLVAKfYJm?usp=drive_link"
         },
         {
-            img: "/img/project-1.jpg",
-            subtitle: "Mobile Design",
-            title: "Food Delivery Dashboard",
-            description: "Designed an intuitive courier dashboard with real-time tracking interfaces and optimized information architecture."
+            img: "/img/project-4.jpg",
+            subtitle: "Graphic Design",
+            title: "Posters & Banners",
+            description: "Designed vibrant, engaging promotional materials, including posters and banners for institutional events, technical symposiums, and hackathons.",
+            link: "https://drive.google.com/drive/folders/1IkFi_kmDoyZ2j_xYx0DtY-XxpT4mV13c?usp=drive_link"
         },
         {
-            img: "/img/project-2.jpg",
-            subtitle: "Visual Identity",
-            title: "Barbershop Branding",
-            description: "Created a cohesive digital identity and booking interface, blending traditional aesthetics with modern user experience."
-        }
+            img: "/img/project-5.jpg",
+            subtitle: "Event Design",
+            title: "Certificates",
+            description: "Designed professional and elegant certificates recognizing participants and winners of management fests, cultural celebrations, and events.",
+            link: "https://drive.google.com/drive/folders/1p4XQMCZWMQnCCfcli1Bu2vZ--iEhVx04?usp=drive_link"
+        },
     ];
 
     const fadeInMask: Variants = {
@@ -91,7 +96,7 @@ const Projects = () => {
                     >
                         <div className="projects-image">
                             <img src={project.img} alt="image" className="projects-img" />
-                            <a href="#" className="projects-button button">
+                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="projects-button button">
                                 <i className="ri-arrow-right-up-line"></i>
                             </a>
                         </div>
@@ -99,14 +104,6 @@ const Projects = () => {
                             <h3 className="projects-subtitle">{project.subtitle}</h3>
                             <h2 className="projects-title">{project.title}</h2>
                             <p className="projects-description">{project.description}</p>
-                        </div>
-                        <div className="projects-buttons">
-                            <a href="https://github.com/" target="_blank" className="projects-link">
-                                <i className="ri-github-line"></i>View
-                            </a>
-                            <a href="https://dribbble.com/" target="_blank" className="projects-link">
-                                <i className="ri-dribbble-line"></i>View
-                            </a>
                         </div>
                     </motion.article>
                 ))}

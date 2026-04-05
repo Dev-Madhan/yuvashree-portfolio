@@ -61,10 +61,10 @@ export default function Page() {
                 <Home />
                 <About />
                 <Skills />
-                <Projects />
-                <Gallery />
                 <Journey />
+                <Projects />
                 <Certificates />
+                <Gallery />
                 <Contact />
             </main>
             <Footer />

@@ -862,6 +862,9 @@ body.dark-theme{
 }
 
 .projects-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   margin-bottom: 1.25rem;
 }
 
@@ -871,7 +874,7 @@ body.dark-theme{
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
   color: var(--text-color);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0;
   padding-left: 1.75rem;
 }
 
@@ -887,7 +890,7 @@ body.dark-theme{
 
 .projects-title {
   font-size: var(--h3-font-size);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0;
 }
 
 .projects-buttons {

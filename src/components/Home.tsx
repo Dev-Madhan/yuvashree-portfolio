@@ -10,9 +10,9 @@ const Home = () => {
 
     useEffect(() => {
         if (!sectionRef.current) return;
-        
+
         const q = gsap.utils.selector(sectionRef.current);
-        
+
         gsap.from(q(".letter"), {
             opacity: 0,
             y: 50,
@@ -27,7 +27,7 @@ const Home = () => {
     return (
         <section ref={sectionRef} className="home section" id="home">
             <div className="home-container container grid">
-                <motion.h1 
+                <motion.h1
                     className="home-name"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -40,7 +40,7 @@ const Home = () => {
                 </motion.h1>
 
                 <div className="home-profile">
-                    <motion.div 
+                    <motion.div
                         className="home-image"
                         initial={{ opacity: 0, x: 100 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -65,7 +65,7 @@ const Home = () => {
                         <div className="geometric-box"></div>
                     </motion.div>
 
-                    <motion.div 
+                    <motion.div
                         className="home-social"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -84,15 +84,15 @@ const Home = () => {
                             <i className="bx bxl-linkedin"></i>
                         </a>
                         <a
-                            href="https://github.com/"
+                            href="https://api.whatsapp.com/send?phone=7397280135&text=Hello, Yuvashree!"
                             target="_blank"
                             className="home-social-link">
-                            <i className="bx bxl-github"></i>
+                            <i className="bx bxl-whatsapp"></i>
                         </a>
                     </motion.div>
                 </div>
 
-                <motion.div 
+                <motion.div
                     className="home-info"
                     initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
