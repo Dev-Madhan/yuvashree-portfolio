@@ -22,6 +22,36 @@ const Home = () => {
             delay: 2, // After curtain
             ease: "back.out(1.7)"
         });
+
+        // Professional, subtle hero image intro sequence
+        const tl = gsap.timeline({ delay: 2.1 });
+
+        tl.from(q(".home-img"), {
+            opacity: 0,
+            y: 30, // Gentle upward lift
+            duration: 1.6,
+            ease: "power3.out"
+        }, 0)
+        .from(q(".home-shadow"), {
+            opacity: 0,
+            y: 20,
+            x: -10, // Slight diagonal float for depth
+            duration: 1.6,
+            ease: "power3.out"
+        }, 0.2)
+        .from(q(".geometric-box"), {
+            opacity: 0,
+            y: -15, 
+            duration: 1.4,
+            ease: "power2.out"
+        }, 0.3)
+        .from(q(".home-arrow, .home-line"), {
+            opacity: 0,
+            y: 10,
+            stagger: 0.15,
+            duration: 1.2,
+            ease: "power2.out"
+        }, 0.4);
     }, []);
 
     return (
@@ -42,9 +72,9 @@ const Home = () => {
                 <div className="home-profile">
                     <motion.div
                         className="home-image"
-                        initial={{ opacity: 0, x: 100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1, delay: 0.4 }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1, delay: 2, ease: "easeInOut" }}
                     >
                         <img
                             src="/img/hero-image.jpg"

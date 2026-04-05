@@ -62,9 +62,9 @@ export default function Page() {
                 <About />
                 <Skills />
                 <Journey />
+                <Gallery />
                 <Projects />
                 <Certificates />
-                <Gallery />
                 <Contact />
             </main>
             <Footer />

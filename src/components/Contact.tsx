@@ -65,6 +65,30 @@ const Contact = () => {
         }
     };
 
+    const slideInLeft: Variants = {
+        hidden: { opacity: 0, x: -60 },
+        visible: { 
+            opacity: 1, 
+            x: 0,
+            transition: { 
+                duration: 1.2, 
+                ease: [0.16, 1, 0.3, 1] as const
+            }
+        }
+    };
+
+    const slideInRight: Variants = {
+        hidden: { opacity: 0, x: 60 },
+        visible: { 
+            opacity: 1, 
+            x: 0,
+            transition: { 
+                duration: 1.2, 
+                ease: [0.16, 1, 0.3, 1] as const
+            }
+        }
+    };
+
     const staggerContainer: Variants = {
         hidden: { opacity: 0 },
         visible: {
@@ -77,7 +101,7 @@ const Contact = () => {
     };
 
     return (
-        <section className="contact section" id="contact">
+        <section className="contact section" id="contact" style={{ overflow: "hidden" }}>
             <motion.div 
                 className="contact-container container grid"
                 variants={staggerContainer}
@@ -87,7 +111,8 @@ const Contact = () => {
             >
                 <motion.div 
                     className="contact-data"
-                    variants={fadeInMask}
+                    variants={slideInLeft}
+                    style={{ willChange: "transform, opacity" }}
                 >
                     <h2 className="section-title-2">Contact Me.</h2>
                     <p className="contact-description-1">
@@ -101,7 +126,8 @@ const Contact = () => {
 
                 <motion.div 
                     className="contact-mail"
-                    variants={fadeInMask}
+                    variants={slideInRight}
+                    style={{ willChange: "transform, opacity" }}
                 >
                     <h2 className="contact-title">Send Me A Message</h2>
 
@@ -141,6 +167,7 @@ const Contact = () => {
                 <motion.div 
                     className="contact-social"
                     variants={fadeInMask}
+                    style={{ willChange: "transform, opacity" }}
                 >
                     <img src="/img/curved-arrow.svg" alt="" className="contact-social-arrow" />
                     <div className="contact-social-data">
