@@ -1067,9 +1067,11 @@ body.dark-theme{
 }
 
 .gallery-image-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
     overflow: hidden;
     z-index: 5;
 }
@@ -1118,8 +1120,8 @@ body.dark-theme{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
     background: radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.1));
     pointer-events: none;
 }
