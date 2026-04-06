@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const galleryImages = [
-    { src: "/gallery/gal - (1).jpg", label: "Induction day 2025" },
+    { src: "/gallery/gal - (1).jpg", label: "Techyugam 2023" },
     { src: "/gallery/gal - (2).jpg", label: "Tech Club Secretary" },
     { src: "/gallery/gal - (3).jpg", label: "Alumini Meet 2025" },
     { src: "/gallery/gal - (4).jpg", label: "Esperanza 2026" },
@@ -13,7 +13,7 @@ const galleryImages = [
     { src: "/gallery/gal - (8).jpg", label: "Technical Team" },
     { src: "/gallery/gal - (9).jpg", label: "Esperanza 2025" },
     { src: "/gallery/gal - (10).jpg", label: "Woman's Day Celebration" },
-    { src: "/gallery/gal - (11).jpg", label: "Innovate 2026" },
+    { src: "/gallery/gal - (11).jpg", label: "Genovate 2025" },
     { src: "/gallery/gal - (12).jpg", label: "Induction day 2025" },
     { src: "/gallery/gal - (13).jpg", label: "Techyugam 2024" }
 ];
