@@ -15,7 +15,7 @@ const Projects = () => {
             img: "/img/project-2.jpg",
             subtitle: "Editorial Design",
             title: "Magazine Layouts",
-            description: "Designed engaging, professional layouts for tech magazines like Codesprintz'24 and SPARK'23, balancing aesthetics with content readability.",
+            description: "Designed engaging, professional layouts for department magazines like Codesprintz'24 and SPARK'23, balancing aesthetics with content readability.",
             link: "https://drive.google.com/drive/folders/1PYcv13dzitLiwV_6iv0PYY7Lp8TQoGCa?usp=drive_link"
         },
         {
@@ -43,11 +43,11 @@ const Projects = () => {
 
     const fadeInMask: Variants = {
         hidden: { opacity: 0, y: 50 },
-        visible: { 
-            opacity: 1, 
+        visible: {
+            opacity: 1,
             y: 0,
-            transition: { 
-                duration: 1.2, 
+            transition: {
+                duration: 1.2,
                 ease: [0.16, 1, 0.3, 1] as const
             }
         }
@@ -66,7 +66,7 @@ const Projects = () => {
 
     return (
         <section className="projects section" id="projects">
-            <motion.h2 
+            <motion.h2
                 className="section-title-1"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +76,7 @@ const Projects = () => {
                 <span>Projects.</span>
             </motion.h2>
 
-            <motion.div 
+            <motion.div
                 className="projects-container container grid"
                 variants={staggerContainer}
                 initial="hidden"
@@ -84,11 +84,11 @@ const Projects = () => {
                 viewport={{ once: true, margin: "-50px" }}
             >
                 {projectsData.map((project, index) => (
-                    <motion.article 
-                        key={index} 
+                    <motion.article
+                        key={index}
                         className="projects-card"
                         variants={fadeInMask}
-                        whileHover={{ 
+                        whileHover={{
                             y: -12,
                             boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
                             transition: { duration: 0.4, ease: "easeOut" }

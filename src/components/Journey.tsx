@@ -19,7 +19,7 @@ const journeyData = [
         year: 'Strategic Lead',
         title: 'BIS Club Coordinator',
         subtitle: 'Project Planning',
-        description: 'Orchestrated design and technical strategies for the IT Department, ensuring high standards across all departmental club activities and student engagements.',
+        description: 'The BIS Club, under the Bureau of Indian Standards, promotes awareness of quality and standardization among students through events, activities, and active member engagement.',
     },
     {
         year: 'Event Director',
@@ -32,11 +32,11 @@ const journeyData = [
 const Journey = () => {
     const fadeInMask: Variants = {
         hidden: { opacity: 0, y: 30 },
-        visible: { 
-            opacity: 1, 
+        visible: {
+            opacity: 1,
             y: 0,
-            transition: { 
-                duration: 1.2, 
+            transition: {
+                duration: 1.2,
                 ease: [0.16, 1, 0.3, 1] as const
             }
         }
@@ -55,7 +55,7 @@ const Journey = () => {
 
     return (
         <section className="journey section" id="journey">
-            <motion.h2 
+            <motion.h2
                 className="section-title-1"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -66,7 +66,7 @@ const Journey = () => {
             </motion.h2>
 
             <div className="journey-container container grid">
-                <motion.div 
+                <motion.div
                     className="journey-content"
                     variants={staggerContainer}
                     initial="hidden"
@@ -74,12 +74,12 @@ const Journey = () => {
                     viewport={{ once: true, margin: "-100px" }}
                 >
                     {journeyData.map((item, index) => (
-                        <motion.div 
+                        <motion.div
                             key={index}
                             className="journey-item"
                             variants={fadeInMask}
                         >
-                            <motion.div 
+                            <motion.div
                                 className="journey-dot"
                                 initial={{ scale: 0 }}
                                 whileInView={{ scale: 1 }}
